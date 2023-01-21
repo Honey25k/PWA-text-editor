@@ -4,7 +4,7 @@ const initdb = async () =>
   openDB('text', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('text')) {
-        console.log('text database already exists');
+        console.log('db text already exits');
         return;
       }
       db.createObjectStore('text', { keyPath: 'id', autoIncrement: true });
@@ -12,8 +12,8 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-// dummy comment for heroku deploy
+// Logic to a method that accepts some content and adds it to the database
+
 export const putDb = async (content) => {
   console.log('PUT to the database');
 
@@ -27,10 +27,10 @@ export const putDb = async (content) => {
 
   const result = await request;
 
-console.log('data put request to the database', result);
+console.log('put request to the db', result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// Logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log ('GET from the database');
 

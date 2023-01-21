@@ -3,8 +3,8 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
+// Add and configure workbox plugins for a service worker and manifest file.
+// Add CSS loaders and babel to webpack.
 
 module.exports = () => {
   return {
@@ -31,13 +31,13 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "Text Editor",
-        short_name: "TextEdit",
-        description: "Edit your text offline!",
-        background_color: "#34a1eb",
-        theme_color: "#ebae34",
-        start_url: "./",
-        publicPath: "./",
+        name: "Text Editor for you",
+        short_name: "TextEdit4u",
+        description: "oflline mode available",
+        background_color: "#ccc",
+        theme_color: "#ccc",
+        start_url: "/",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
